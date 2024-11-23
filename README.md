@@ -55,4 +55,34 @@ def tambah_data(mahasiswa):
  - print("Data mahasiswa berhasil ditambahkan.") menampilkan pesan konfirmasi kepada pengguna bahwa data mahasiswa telah berhasil ditambahkan.
 
 2. Menampilkan menu (Ubah Data)
-   
+![Screenshot (43)](https://github.com/user-attachments/assets/feb17c28-2c4d-423b-b393-bab51905e186)
+
+Definisi Fungsi:
+
+def ubah_data(mahasiswa): mendefinisikan sebuah fungsi bernama ubah_data, yang menerima satu parameter yaitu mahasiswa. Parameter ini diharapkan berupa dictionary yang menyimpan data mahasiswa.
+Input NIM:
+
+nim = input("Masukkan NIM mahasiswa yang ingin diubah: ") meminta pengguna untuk memasukkan NIM (Nomor Induk Mahasiswa) dari mahasiswa yang datanya ingin diubah. Nilai ini disimpan dalam variabel nim.
+Pengecekan NIM:
+
+if nim in mahasiswa: memeriksa apakah NIM yang dimasukkan oleh pengguna ada dalam dictionary mahasiswa. Jika NIM tersebut ada, program akan melanjutkan ke langkah berikutnya. Jika tidak, program akan menampilkan pesan bahwa NIM tidak ditemukan.
+Input Data Baru:
+
+Jika NIM ditemukan, program akan meminta pengguna untuk memasukkan data baru:
+nama = input("Masukkan nama mahasiswa baru: ") untuk memasukkan nama baru.
+tugas = float(input("Masukkan nilai tugas baru: ")) untuk memasukkan nilai tugas baru, dan mengkonversinya menjadi tipe data float.
+uts = float(input("Masukkan nilai UTS baru: ")) untuk memasukkan nilai UTS baru.
+uas = float(input("Masukkan nilai UAS baru: ")) untuk memasukkan nilai UAS baru.
+Menghitung Nilai Akhir:
+
+nilai_akhir = hitung_nilai_akhir(tugas, uts, uas) memanggil fungsi hitung_nilai_akhir, yang menghitung nilai akhir berdasarkan nilai tugas, UTS, dan UAS yang baru dimasukkan. Hasil perhitungan disimpan dalam variabel nilai_akhir.
+Memperbarui Data di Dictionary:
+
+mahasiswa[nim] = {'nama': nama, 'tugas': tugas, 'uts': uts, 'uas': uas, 'nilai_akhir': nilai_akhir} mengupdate data mahasiswa yang ada di dalam dictionary mahasiswa dengan nilai-nilai baru yang telah dimasukkan oleh pengguna. Data baru disimpan dengan menggunakan NIM sebagai kunci.
+Pesan Konfirmasi:
+
+print("Data mahasiswa berhasil diubah.") menampilkan pesan konfirmasi kepada pengguna bahwa data mahasiswa telah berhasil diubah.
+Pesan NIM Tidak Ditemukan:
+
+Jika NIM yang dimasukkan tidak ditemukan dalam dictionary mahasiswa, maka program akan mengeksekusi bagian else dan menampilkan pesan print("NIM tidak ditemukan.").
+Kesimpulan:

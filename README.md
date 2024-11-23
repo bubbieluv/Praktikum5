@@ -6,9 +6,53 @@ Buat program sederhana untuk menampilkan daftar nilai mahasiswa dengan ketentuan
 ![Screenshot (47)](https://github.com/user-attachments/assets/a7b4ea1f-95e4-47b5-9848-e0272c04d601)
 ![Screenshot (48)](https://github.com/user-attachments/assets/ec4bd272-fe75-4e85-ad43-40b148301d60)
 ![Screenshot (49)](https://github.com/user-attachments/assets/0160d8f6-1771-47b7-93c9-1204b553838f)
-
-# Penjelasan
+# Penjelasan Program:
+1. Fungsi hitung_nilai_akhir: Menghitung nilai akhir berdasarkan komponen tugas, UTS, dan UAS dengan bobot yang sudah ditentukan.
+2. Fungsi tambah_data: Menambahkan data mahasiswa ke dalam dictionary.
+3. Fungsi ubah_data: Mengubah data mahasiswa berdasarkan NIM yang dimasukkan.
+4. Fungsi hapus_data: Menghapus data mahasiswa berdasarkan NIM yang dimasukkan.
+5. Fungsi tampilkan_data: Menampilkan semua data mahasiswa yang tersimpan.
+6. Fungsi cari_data: Mencari dan menampilkan data mahasiswa berdasarkan NIM.
+   
+# Penjelasan Setiap Menu
 1. Menampilkan menu (Tambah Data)
+![Screenshot (42)](https://github.com/user-attachments/assets/c3c53d3c-f05c-4ba9-8e81-2985d1637ec7)
 
+def tambah_data(mahasiswa):
 
+    nim = input("Masukkan NIM mahasiswa: ")
+    
+    nama = input("Masukkan nama mahasiswa: ")
+    
+    tugas = float(input("Masukkan nilai tugas: "))
+    
+    uts = float(input("Masukkan nilai UTS: "))
+    
+    uas = float(input("Masukkan nilai UAS: "))
+    
+    nilai_akhir = hitung_nilai_akhir(tugas, uts, uas)
+    
+    mahasiswa[nim] = {'nama': nama, 'tugas': tugas, 'uts': uts, 'uas': uas, 'nilai_akhir': nilai_akhir}
+    
+    print("Data mahasiswa berhasil ditambahkan.")
 
+1) Definisi Fungsi:
+ - def tambah_data(mahasiswa): mendefinisikan sebuah fungsi bernama tambah_data, yang menerima satu parameter yaitu mahasiswa. Parameter ini diharapkan berupa dictionary yang menyimpan data mahasiswa.
+2) Input NIM:
+ - nim = input("Masukkan NIM mahasiswa: ") meminta pengguna untuk memasukkan NIM (Nomor Induk Mahasiswa) dari mahasiswa yang akan ditambahkan. Nilai ini disimpan dalam variabel nim.
+3) Input Nama:
+ - nama = input("Masukkan nama mahasiswa: ") meminta pengguna untuk memasukkan nama mahasiswa. Nilai ini disimpan dalam variabel nama.
+4) Input Nilai Tugas, UTS, dan UAS:
+ - tugas = float(input("Masukkan nilai tugas: ")) meminta pengguna untuk memasukkan nilai tugas dan mengkonversinya menjadi tipe data float agar dapat melakukan perhitungan desimal.
+   uts = float(input("Masukkan nilai UTS: ")) dan uas = float(input("Masukkan nilai UAS: ")) melakukan hal yang sama untuk nilai UTS dan UAS.
+5) Menghitung Nilai Akhir:
+ - nilai_akhir = hitung_nilai_akhir(tugas, uts, uas) memanggil fungsi hitung_nilai_akhir yang telah didefinisikan sebelumnya, dengan parameter nilai tugas, UTS, dan UAS. Fungsi ini akan menghitung nilai akhir 
+   berdasarkan bobot yang telah ditentukan (tugas: 30%, UTS: 35%, UAS: 35%).
+6) Menambahkan Data ke Dictionary:
+ - mahasiswa[nim] = {'nama': nama, 'tugas': tugas, 'uts': uts, 'uas': uas, 'nilai_akhir': nilai_akhir} menambahkan data mahasiswa ke dalam dictionary mahasiswa dengan menggunakan NIM sebagai kunci. Nilai dari 
+   kunci ini adalah sebuah dictionary yang berisi nama, nilai tugas, UTS, UAS, dan nilai akhir.
+7) Pesan Konfirmasi:
+ - print("Data mahasiswa berhasil ditambahkan.") menampilkan pesan konfirmasi kepada pengguna bahwa data mahasiswa telah berhasil ditambahkan.
+
+2. Menampilkan menu (Ubah Data)
+   

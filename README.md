@@ -122,4 +122,5 @@ print(f"Nilai Akhir: {data['nilai_akhir']}") menampilkan nilai akhir yang telah 
  5) Pesan NIM Tidak Ditemukan:
  - Jika NIM yang dimasukkan tidak ditemukan dalam dictionary mahasiswa, maka program akan mengeksekusi bagian else dan menampilkan pesan print("NIM tidak ditemukan.").
 
-
+ # Flowchart
+ ![Screenshot (51)](https://github.com/user-attachments/assets/121ed05d-d51d-458d-b46d-dc19ac64384c)

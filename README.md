@@ -15,7 +15,7 @@ Buat program sederhana untuk menampilkan daftar nilai mahasiswa dengan ketentuan
 6. Fungsi cari_data: Mencari dan menampilkan data mahasiswa berdasarkan NIM.
    
 # Penjelasan Setiap Menu
-1. Menampilkan menu (Tambah Data)
+ # 1. Menampilkan menu (Tambah Data)
 ![Screenshot (42)](https://github.com/user-attachments/assets/c3c53d3c-f05c-4ba9-8e81-2985d1637ec7)
 
 1) Definisi Fungsi:
@@ -36,7 +36,7 @@ Buat program sederhana untuk menampilkan daftar nilai mahasiswa dengan ketentuan
 7) Pesan Konfirmasi:
  - print("Data mahasiswa berhasil ditambahkan.") menampilkan pesan konfirmasi kepada pengguna bahwa data mahasiswa telah berhasil ditambahkan.
 
-2. Menampilkan menu (Ubah Data)
+ # 2. Menampilkan menu (Ubah Data)
 ![Screenshot (43)](https://github.com/user-attachments/assets/feb17c28-2c4d-423b-b393-bab51905e186)
 
 1) Definisi Fungsi:
@@ -61,4 +61,21 @@ Buat program sederhana untuk menampilkan daftar nilai mahasiswa dengan ketentuan
 7) Pesan Konfirmasi:
  - print("Data mahasiswa berhasil diubah.") menampilkan pesan konfirmasi kepada pengguna bahwa data mahasiswa telah berhasil diubah.
 8) Pesan NIM Tidak Ditemukan:
+ - Jika NIM yang dimasukkan tidak ditemukan dalam dictionary mahasiswa, maka program akan mengeksekusi bagian else dan menampilkan pesan print("NIM tidak ditemukan.").
+
+ # 3. Menampilkan menu (Hapus Data)
+
+![Screenshot (44)](https://github.com/user-attachments/assets/4e87c8d2-1a06-438b-af8b-39f7172168c8)
+
+ 1) Definisi Fungsi:
+ - def hapus_data(mahasiswa): mendefinisikan sebuah fungsi bernama hapus_data, yang menerima satu parameter yaitu mahasiswa. Parameter ini diharapkan berupa dictionary yang menyimpan data mahasiswa.
+ 2) Input NIM:
+ - nim = input("Masukkan NIM mahasiswa yang ingin dihapus: ") meminta pengguna untuk memasukkan NIM (Nomor Induk Mahasiswa) dari mahasiswa yang datanya ingin dihapus. Nilai ini disimpan dalam variabel nim.
+ 3) Pengecekan NIM:
+ - if nim in mahasiswa: memeriksa apakah NIM yang dimasukkan oleh pengguna ada dalam dictionary mahasiswa. Jika NIM tersebut ada, program akan melanjutkan ke langkah berikutnya. Jika tidak, program akan menampilkan pesan bahwa NIM tidak ditemukan.
+ 4) Menghapus Data:
+ - Jika NIM ditemukan, del mahasiswa[nim] akan menghapus entri yang terkait dengan NIM tersebut dari dictionary mahasiswa. Fungsi del digunakan untuk menghapus item dari dictionary berdasarkan kunci (dalam hal ini, NIM).
+ 5) Pesan Konfirmasi:
+ - print("Data mahasiswa berhasil dihapus.") menampilkan pesan konfirmasi kepada pengguna bahwa data mahasiswa telah berhasil dihapus.
+ 6) Pesan NIM Tidak Ditemukan:
  - Jika NIM yang dimasukkan tidak ditemukan dalam dictionary mahasiswa, maka program akan mengeksekusi bagian else dan menampilkan pesan print("NIM tidak ditemukan.").
